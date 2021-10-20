@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="<%= htmlWebpackPlugin.options.lang %>">
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <% if (htmlWebpackPlugin.options.manifest) { %>
+    <link href="<%= htmlWebpackPlugin.options.manifest %>" rel="manifest" />
+    <% } %>
+  </head>
+  <body>
+    <noscript
+      >Sorry, your browser is not supported. Please upgrade to the latest version or switch your
+      browser to use this site. See
+      <a href="http://outdatedbrowser.com/">outdatedbrowser.com</a> for options.</noscript
+    >
+  </body>
+</html>

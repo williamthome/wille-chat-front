@@ -1,0 +1,24 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+
+  "compilerOptions": {
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node", "svelte"],
+    "rootDir": "src",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "declaration": false,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/*", "_public/*", "src/pwa"]
+}

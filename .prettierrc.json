@@ -1,0 +1,20 @@
+{
+  "svelteSortOrder": "options-scripts-markup-styles",
+  "svelteStrictMode": true,
+  "svelteBracketNewLine": true,
+  "svelteAllowShorthand": false,
+  "svelteIndentScriptAndStyle": true,
+  "printWidth": 100,
+  "singleQuote": true,
+  "wrapAttributes": true,
+  "sortAttributes": true,
+  "semi": false,
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}

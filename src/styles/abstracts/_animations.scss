@@ -1,0 +1,73 @@
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($name, $duration, $options: '') {
+  -webkit-animation: #{$name} #{$duration} #{$options};
+  -moz-animation: #{$name} #{$duration} #{$options};
+  -ms-animation: #{$name} #{$duration} #{$options};
+  -o-animation: #{$name} #{$duration} #{$options};
+  animation: #{$name} #{$duration} #{$options};
+}
+
+// FADE IN
+// e.g. @include fadeIn( 2s );
+
+@mixin fadeIn($duration, $options: '') {
+  @include animation(fade-in, $duration, $options);
+}
+
+@mixin fadeOut($duration, $options: '') {
+  @include animation(fade-out, $duration, $options);
+}
+
+@mixin fade($duration, $options: '') {
+  @include animation(fade, $duration, $options);
+}
+
+@include keyframes(fade-in) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fade-out) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(fade) {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
